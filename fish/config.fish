@@ -28,5 +28,3 @@ test -r ~/.fish.env; and export (cat ~/.fish.env|xargs -L 1)
 for f in (find ~/.config/fish/$USER/ -type f  -name '*.fish')
     source $f
 end
-
-set -g fish_user_paths "/usr/local/opt/node@8/bin" $fish_user_paths
