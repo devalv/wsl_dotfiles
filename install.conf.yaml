@@ -1,0 +1,49 @@
+- defaults:
+    link:
+      relink: true
+
+- clean: ['~']
+
+
+- create:
+    - ~/.config
+    - ~/.config/fish
+    - ~/.config/terminator
+
+- link:
+    ~/.config/fish/config.fish: fish/config.fish
+    ~/.config/fish/$USER: fish/devalv
+    ~/.config/omf: fish/omf
+    ~/.vimrc: vimrc
+    ~/.gitconfig: gitconfig
+    ~/.editorconfig: editorconfig
+    ~/.flake8: flake8
+    ~/.cookiecutterrc: cookiecutterrc
+    ~/.config/terminator/config:
+      force: true
+      path: terminator/config
+
+- shell:
+  - [git submodule update --init --recursive, Installing submodules]
+  - [sudo ./install-linux-core.sh, Installing Fish, Terminator and essential core utils]
+  - [sudo ./install-linux-stuff.sh, Installing additional linux utils]
+  - [curl -L https://get.oh-my.fish > /tmp/omf_install, Downloading Oh-My-Fish]
+  - chmod +x /tmp/omf_install
+  - [fish -c "/tmp/omf_install --noninteractive", Installing Of-My-Fish]
+  - rm /tmp/omf_install
+  - [fish -c omf update, Installing omf plugins]
+  - command: sudo ./install-docker.sh
+    stdin: true
+    stdout: true
+    description: Installing docker and docker-compose
+  - command: ./install-python-stuff.sh
+    stdin: true
+    stdout: true
+    description: Installing Python stuff
+  - [./install-chrome.sh, Installing Google Chrome]
+  - [sudo ./install-snap-utils.sh, Installing graphical utils via Snap]
+  - command: ./install-vim-plugins.sh
+    stdin: true
+    stdout: true
+    description: Vim plugins installation
+  - [echo "Installation completed. Run fish -c 'chsh -s (which fish)' to set fish as default shell."]
