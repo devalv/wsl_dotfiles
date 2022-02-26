@@ -36,6 +36,6 @@
     description: Vim plugins installation
   - [echo "Installation completed."]
   - [echo "Run fish -c 'chsh -s (which fish)' to set fish as default shell."]
-  - [echo "Pretty errors: python -m pip install pretty_errors && python -m pretty_errors"]
-  - [echo "Cookiecutter: python -m pip install -U cookiecutter"]
+  - [echo "Pretty errors python -m pip install pretty_errors && python -m pretty_errors"]
+  - [echo "Cookiecutter python -m pip install -U cookiecutter"]
   - [echo "Maybe you need to install poetry or pipenv."]
