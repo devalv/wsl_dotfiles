@@ -35,5 +35,5 @@
     stdout: true
     description: Vim plugins installation
   - [echo "Installation completed. Run fish -c 'chsh -s (which fish)' to set fish as default shell."]
-  - [echo "Maybe you need to run `python -m pip install pretty_errors`, `python -m pretty_errors` and `python -m pip install -U cookiecutter`."]
-  - [echo "Don`t forget to install poetry."]
+  - [echo "Maybe you need to run 'python -m pip install pretty_errors', 'python -m pretty_errors' and 'python -m pip install -U cookiecutter'."]
+  - [echo "Maybe you need to install poetry or pipenv."]
