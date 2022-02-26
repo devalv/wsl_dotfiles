@@ -3,7 +3,5 @@ package epwd
 package fzf
 package getopts
 package gi
-package https://github.com/wfscheper/plugin-docker
 package pyenv
 theme default
-theme nai
