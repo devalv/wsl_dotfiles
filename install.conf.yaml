@@ -4,7 +4,6 @@
 
 - clean: ['~']
 
-
 - create:
     - ~/.config
     - ~/.config/fish
@@ -21,7 +20,7 @@
     
 - shell:
   - [git submodule update --init --recursive, Installing submodules]
-    - [sudo ./install-linux-stuff.sh, Installing linux console utils]
+  - [sudo ./install-linux-stuff.sh, Installing linux console utils]
   - [curl -L https://get.oh-my.fish > /tmp/omf_install, Downloading Oh-My-Fish]
   - chmod +x /tmp/omf_install
   - [fish -c "/tmp/omf_install --noninteractive", Installing Of-My-Fish]
