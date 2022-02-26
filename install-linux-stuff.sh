@@ -2,6 +2,7 @@
 
 set -e
 
+[ -z "$(dpkg -s fish)" ] && apt install fish -y
 [ -z "$(dpkg -s fonts-firacode)" ] && apt-get install fonts-firacode -y
 [ -z "$(dpkg -s tmux)" ] && apt install tmux -y
 [ -z "$(dpkg -s curl)" ] && apt install curl -y
@@ -25,11 +26,6 @@ set -e
 [ -z "$(dpkg -s unrar)" ] && apt install unrar -y
 [ -z "$(dpkg -s vim)" ] && apt install vim -y 
 [ -z "$(dpkg -s wget)" ] && apt install wget -y 
-[ -z "$(dpkg -s simplescreenrecorder)" ] && apt install simplescreenrecorder -y 
-[ -z "$(dpkg -s scrot)" ] && apt install scrot -y
-[ -z "$(dpkg -s openvpn)" ] && apt install openvpn -y
-[ -z "$(dpkg -s openssh-client)" ] && apt install openssh-client -y
 [ -z "$(dpkg -s default-jre)" ] && apt install default-jre -y
-[ -z "$(dpkg -s bpytop)" ] && apt install bpytop -y
 
 exit 0
