@@ -9,7 +9,6 @@ set -e
 [ -z "$(dpkg -s mc)" ] && apt install mc -y
 [ -z "$(dpkg -s htop)" ] && apt install htop -y
 [ -z "$(dpkg -s git)" ] && apt install git -y
-[ -z "$(dpkg -s bat)" ] && apt install bat -y
 [ -z "$(dpkg -s ansible-lint)" ] && apt install ansible-lint -y
 [ -z "$(dpkg -s gnupg)" ] && apt install gnupg -y
 [ -z "$(dpkg -s jsonlint)" ] && apt install jsonlint -y
