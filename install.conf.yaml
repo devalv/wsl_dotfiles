@@ -39,3 +39,4 @@
   - [echo "Pretty errors python -m pip install pretty_errors && python -m pretty_errors"]
   - [echo "Cookiecutter python -m pip install -U cookiecutter"]
   - [echo "Maybe you need to install poetry or pipenv."]
+  - [echo "EXA - https://github.com/ogham/exa" ]
