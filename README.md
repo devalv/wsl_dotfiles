@@ -33,7 +33,6 @@ The default console editor is **vim**.
 - htop
 - tmux
 - git
-- bat
 - ansible-lint
 - gnupg
 - jsonlint
